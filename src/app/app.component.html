@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <h3>Active Users</h3>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let user of activeUsers">
+          {{ user }} | <a href="#" (click)="onSetToInactive(user)">Set to Inactive</a>
+        </li>
+      </ul>
+
+      <h3>Inactive Users</h3>
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let user of inactiveUsers">
+          {{ user }} | <a href="#" (click)="onSetToActive(user)">Set to Active</a>
+        </li>
+      </ul>
+
+      <p>Active to Inactive Count: {{ activeToInactiveCount }}</p>
+      <p>Inactive to Active Count: {{ inactiveToActiveCount }}</p>
+    </div>
+  </div>
+</div>
